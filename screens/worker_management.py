@@ -49,7 +49,7 @@ class WorkerManagement(Screen):
         entrykey = self.worker_key.text
 
         if len(name) != 0 and len(position) != 0 and len(entrykey) != 0:
-            if os.path.exists('/home/jetson/Desktop/entry_app/img_encode.jpg'):
+            if os.path.exists('PATH TO IMG'):
                 print('picture is taken')
                 self.worker.add_worker(name,position,entrykey)
                 id = self.worker.find_id(entryKey=entrykey)
@@ -124,7 +124,7 @@ class WorkerManagement(Screen):
 
         if len(upd_name) != 0 and len(upd_position) != 0 and len(upd_key) != 0:
 
-            if upd_name == name and upd_position == position and upd_key == key and os.path.exists('/home/jetson/Desktop/entry_app/img_encode.jpg') == False:
+            if upd_name == name and upd_position == position and upd_key == key and os.path.exists('PATH TO IMG') == False:
                 popup = BasePopup(message = 'No information was changed')
                 popup.open()
 
@@ -133,7 +133,7 @@ class WorkerManagement(Screen):
                                         position,upd_position, \
                                         key,upd_key)
                 
-                if os.path.exists('/home/jetson/Desktop/entry_app/img_encode.jpg'):
+                if os.path.exists('PATH TO IMG'):
                     id = self.worker.find_id(entryKey=upd_key)
                     update_picture(id)
 
