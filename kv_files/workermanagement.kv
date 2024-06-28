@@ -1,0 +1,194 @@
+<WorkerManagement>:
+
+    worker_name: worker_name
+    worker_position: worker_position
+    worker_key: worker_key
+    worker_id: worker_id
+
+    update_name: update_name
+    update_position: update_position
+    update_key: update_key
+
+
+    mode: 'add'
+    TabFeatures:
+        Label:
+            text: "Add worker" if root.mode == 'add' else ("Update worker" if root.mode == 'manage' else ("Update worker" if root.mode == 'add_update' else "Delete worker"))
+            font_name: 'Barlow'
+            font_size: 30
+            pos_hint: {'center_x': 0.5} 
+            size_hint: 1, 1.68
+        Label: 
+            text : "Name: " 
+            font_name: 'Barlow'
+            font_size: 25
+            size_hint: 0.2, 0.1
+            pos_hint: {'center_x': 0.3, "top": 0.75} 
+            opacity: 0 if root.mode != 'add' else 1 
+
+        Label: 
+            text : "Name: " 
+            font_name: 'Barlow'
+            font_size: 25
+            size_hint: 0.2, 0.1
+            pos_hint: {'center_x': 0.3, "top": 0.75} 
+            opacity: 0 if root.mode != 'add_update' else 1 
+        
+
+        TextInput:
+            id : worker_name
+            multiline :False
+            font_size: 25
+            font_name: 'Barlow'
+            size_hint: 0.4, 0.1
+            pos_hint: {'center_x': 0.6, "top": 0.75} 
+            opacity: 0 if root.mode != 'add' else 1 
+
+        TextInput:
+            id : update_name
+            text: "Some text"
+            multiline :False
+            font_size: 25
+            font_name: 'Barlow'
+            size_hint: 0.4, 0.1
+            pos_hint: {'center_x': 0.6, "top": 0.75} 
+            opacity: 0 if root.mode != 'add_update' else 1
+            disabled: root.mode != 'add_update' 
+        
+        Label: 
+            text : "Position: "
+            font_name: 'Barlow'
+            font_size: 25
+            size_hint: 0.2, 0.1
+            pos_hint: {'center_x': 0.3, "top": 0.6} 
+            opacity: 0 if root.mode != 'add' else 1 
+
+        Label: 
+            text : "Position: "
+            font_name: 'Barlow'
+            font_size: 25
+            size_hint: 0.2, 0.1
+            pos_hint: {'center_x': 0.3, "top": 0.6} 
+            opacity: 0 if root.mode != 'add_update' else 1             
+
+        TextInput: 
+            id : worker_position
+            font_name: 'Barlow'
+            multiline :False
+            font_size: 25
+            size_hint: 0.4, 0.1
+            pos_hint: {'center_x': 0.6, "top": 0.6} 
+            opacity: 0 if root.mode != 'add' else 1
+
+        TextInput: 
+            id : update_position
+            font_name: 'Barlow'
+            text: "Some text"
+            multiline :False
+            font_size: 25
+            size_hint: 0.4, 0.1
+            pos_hint: {'center_x': 0.6, "top": 0.6} 
+            opacity: 0 if root.mode != 'add_update' else 1
+            disabled: root.mode != 'add_update' 
+
+
+        Label: 
+            text : "Key: "
+            font_name: 'Barlow'
+            font_size: 25
+            size_hint: 0.2, 0.1
+            pos_hint: {'center_x': 0.3, "top": 0.45} 
+            opacity: 0 if root.mode != 'add' else 1 
+
+        Label: 
+            text : "Key: "
+            font_name: 'Barlow'
+            font_size: 25
+            size_hint: 0.2, 0.1
+            pos_hint: {'center_x': 0.3, "top": 0.45} 
+            opacity: 0 if root.mode != 'add_update' else 1             
+
+        TextInput: 
+            id : worker_key
+            font_name: 'Barlow'
+            multiline :False
+            font_size: 25
+            input_filter: 'int'
+            size_hint: 0.4, 0.1
+            pos_hint: {'center_x': 0.6, "top": 0.45} 
+            opacity: 0 if root.mode != 'add' else 1 
+
+        TextInput: 
+            id : update_key
+            font_name: 'Barlow'
+            text: "Some text"
+            multiline :False
+            font_size: 25
+            size_hint: 0.4, 0.1
+            pos_hint: {'center_x': 0.6, "top": 0.45} 
+            opacity: 0 if root.mode != 'add_update' else 1 
+            disabled: root.mode != 'add_update'
+
+
+        Label: 
+            text : "Enter Worker ID to delete: "
+            font_name: 'Barlow'
+            font_size: 25
+            size_hint: 0.2, 0.1
+            pos_hint: {'center_x': 0.3, "top": 0.6} 
+            opacity: 1 if root.mode == 'delete' else 0 
+            disabled: root.mode != 'delete' 
+
+        Label: 
+            text : "Enter Worker ID to update: "
+            font_name: 'Barlow'
+            input_filter: 'int'
+            font_size: 25
+            size_hint: 0.2, 0.1
+            pos_hint: {'center_x': 0.3, "top": 0.6}
+            opacity: 1 if root.mode == 'manage' else 0 
+            disabled: root.mode != 'manage'     
+
+            
+        TextInput: 
+            id: worker_id 
+            font_name: 'Barlow'
+            multiline :False
+            font_size: 25
+            size_hint: 0.4, 0.1
+            pos_hint: {'center_x': 0.67, "top": 0.6} 
+            opacity: 0 if root.mode == 'add' else (0 if root.mode == 'add_update' else 1)
+            disabled: root.mode == 'add' or root.mode == 'add_update'
+
+        Button:
+            text: 'Take picture' if root.mode == 'add' else 'Update picture'
+            font_name: 'Ubuntu-Medium'
+            background_color: 0.529, 0.573, 0.745, 1 
+            font_size: 25
+            opacity: 1 if root.mode == 'add' else(1 if root.mode == 'add_update' else 0)
+            disabled: root.mode != 'add' and root.mode != 'add_update'
+            size_hint: 0.7, 0.12
+            pos_hint: {'center_x': 0.5, "top": 0.30} 
+            on_press:
+                root.capture()
+
+        GridLayout:
+			cols: 2
+            size_hint: 1, 0.15
+            Button:
+                text: 'Cancel' if root.mode == 'add_update' else 'Back'
+                font_name: 'Ubuntu-Medium'
+                background_color: 0.529, 0.573, 0.745, 1 
+                font_size: 25
+                on_press: 
+                    root.manager.get_screen('workermanagement').button_pressed('cancel' if root.mode == 'add_update' else 'back')
+                    
+                    
+
+            Button:
+                text: 'Add' if root.mode == 'add' else ('Update' if root.mode == 'manage' else ('Update' if root.mode == 'add_update' else 'Delete'))
+                background_color: 0.529, 0.573, 0.745, 1 
+                font_name: 'Ubuntu-Medium'
+                font_size: 25
+                on_press: 
+                    root.button_pressed('add' if root.mode == 'add' else ('manage' if root.mode == 'manage' else ('update' if root.mode == 'add_update' else 'delete')))

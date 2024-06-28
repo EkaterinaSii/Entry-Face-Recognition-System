@@ -1,0 +1,39 @@
+<TabFeatures>:
+    
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            size_hint_y: None
+            height: root.height * 0.10 # Set the height of the button bar to 9% of the screen height
+            padding: [0, 5]
+            Button:
+                id: camera_button
+                text: 'Camera'
+                font_name: 'Ubuntu-Medium'
+                font_size: 20
+                size_hint_x: 0.2  # Each button takes 1/3 of the width
+                on_press:
+                    root.button_pressed('camera')
+                    
+                    
+            Button:
+                id: code_button
+                text: 'Enter Code'
+                font_name: 'Ubuntu-Medium'
+                font_size: 20
+                size_hint_x: 0.2
+                on_press:
+                    root.button_pressed('code')
+                    
+            Button:
+                id: admin_button
+                text: 'Admin'
+                font_name: 'Ubuntu-Medium'
+                font_size: 20
+                size_hint_x: 0.2
+                on_press:
+                    root.button_pressed('admin')
+                    
+        ScreenManager:
+            id: screen_manager

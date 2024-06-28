@@ -1,0 +1,47 @@
+<MainMenu>:
+    TabFeatures:
+        size_hint:1,1
+    
+        Label:
+            id: fixed_label 
+            text: "Main Menu"
+            font_name: 'Barlow'
+            font_size: 50
+            size_hint: 1, 1.65
+            pos_hint: {'center_x': 0.5}
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 0.55, 0.60
+            pos_hint: {'center_x':.5, 'center_y':0.40}
+            spacing: 30 # Add spacing between buttons
+            
+
+            Button:
+                id: door_1
+                text: 'Records'
+                font_name: 'Ubuntu-Medium'
+                background_color: 0.529, 0.573, 0.745, 1 
+                font_size: 28
+                on_press: 
+                    root.button_pressed('records')
+
+            Button:
+                id: door_2
+                text: 'Workers'
+                font_name: 'Ubuntu-Medium'
+                background_color: 0.529, 0.573, 0.745, 1 
+                font_size: 28
+                on_press: 
+                    root.button_pressed('workers')
+
+
+            Button:
+                id: all_records
+                text: 'Logout'
+                font_name: 'Ubuntu-Medium'
+                background_color: 0.529, 0.573, 0.745, 1 
+                font_size: 28
+                on_press: 
+                    root.button_pressed('logout')
+

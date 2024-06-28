@@ -1,0 +1,55 @@
+<Login>:
+    id: login_screen
+    id_number : id_number 
+    entry_key: entry_key
+    TabFeatures:
+        FloatLayout: 
+            size: root.width, root.height
+            Label: 
+                markup: True
+                text: "Enter ID and key number"
+                font_name: 'Barlow'
+                font_size: 48
+                size_hint: 0.3, 0.2
+                pos_hint: {'center_x': 0.5, 'top':0.9}
+            Label: 
+                text: "ID NUMBER: "
+                size_hint: 0.2, 0.1
+                font_name: 'Barlow'
+                font_size: 20
+                pos_hint: {'center_x': 0.5, "top": 0.70} 
+            TextInput: 
+                id: id_number
+                multiline: False
+                font_name: 'Barlow'
+                halign: 'center' 
+                font_size: 36
+                input_filter: 'int'
+                size_hint: 0.5, 0.10
+                pos_hint: {'center_x': 0.5, "top": 0.60}
+                            
+            Label: 
+                text: "ENTRY KEY: "
+                font_name: 'Barlow'
+                size_hint: 0.2, 0.1
+                font_size: 20
+                pos_hint: {'center_x': 0.5, "top": 0.47} 
+            TextInput: 
+                id: entry_key
+                multiline: False
+                halign: 'center'
+                input_filter: 'int' 
+                password: True
+                font_size: 36
+                size_hint: 0.5, 0.10
+                pos_hint: {'center_x': 0.5, "top": 0.37}
+                
+            Button: 
+                text: "ENTER"
+                font_size: 25
+                background_color: 0.529, 0.573, 0.745, 1 
+                font_name: 'Ubuntu-Medium'
+                size_hint: 0.7, 0.15
+                pos_hint: {'center_x': 0.5, "top": 0.20} 
+                on_release:  
+                    root.login_button()

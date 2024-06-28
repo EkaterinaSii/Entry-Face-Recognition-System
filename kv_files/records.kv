@@ -1,0 +1,75 @@
+<Records>:
+
+    TabFeatures:
+        Label:
+            text: "All entry records"
+            font_name: 'Barlow'
+            font_size: 40
+            size_hint: 1, 1.65
+            pos_hint: {'center_x': 0.5}
+
+        Label:
+            color: 0.537, 0.22, 0.165, 1  
+            text: "Date                            Name          Position                       "
+            font_name: 'Barlow'
+            font_size: 28
+            pos_hint: {'center_x': 0.55}
+            size_hint: 1, 1.40
+
+
+        BoxLayout:     
+            orientation: 'vertical'
+            pos_hint: {'center_x': 0.55}
+            y: 125
+            size_hint: 1, 0.4
+
+            ScrollView:
+                do_scroll_y: True
+                do_scroll_x: False
+                scroll_y: 1
+                    
+                Label:
+                    id: records
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    font_name: 'RobotoMono-Regular'
+                    font_size: 26
+                    text: root.label_text
+
+        Label:
+            text: "Sort By:"
+            font_name: 'Barlow'
+            font_size: 18
+            pos_hint:{'center_x':0.12,'center_y':0.6}
+
+
+        Button:
+            text: "Date"
+            font_name: "Ubuntu-Medium"
+            background_color: 0.529, 0.573, 0.745, 1 
+            font_size: 18
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x':0.12,'center_y':0.5}
+            on_press: root.all_records('date')
+
+        Button:
+            text: "Name"
+            font_name: "Ubuntu-Medium"
+            background_color: 0.529, 0.573, 0.745, 1 
+            font_size: 18
+            size_hint: 0.15, 0.1
+            pos_hint: {'center_x':0.12,'center_y':0.4}
+            on_press: root.all_records('name')
+                    
+
+
+        Button:
+            text: 'Back'
+            font_name: 'Ubuntu-Medium'
+            background_color: 0.529, 0.573, 0.745, 1 
+            font_size: 25
+            size_hint: 0.7, 0.15
+            pos_hint: {'center_x': 0.5}
+            y: 20
+            on_press: 
+                root.button_pressed('back')

@@ -1,0 +1,86 @@
+<Workers>:
+    TabFeatures:
+        Label:
+            text: "Workers with access"
+            font_name: 'Barlow'
+            font_size: 40
+            size_hint: 1, 1.65
+
+        Label:
+            id: fixed_label 
+            color: 0.537, 0.22, 0.165, 1  
+            pos_hint: {'center_x': 0.5}
+            text: "#ID           Name                       Position                                 Key   "
+            font_name: 'Barlow'
+            font_size: 28
+            size_hint: 1, 1.40
+
+
+        BoxLayout:     
+            orientation: 'vertical'
+            pos_hint: {'center_x': 0.5}
+            y: 160
+            size_hint: 1, 0.3
+
+            ScrollView:
+                do_scroll_y: True
+                do_scroll_x: False
+                scroll_y: 1
+                    
+                Label:
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    font_name: 'RobotoMono-Regular'
+                    font_size: 26
+                    text: root.label_text
+            
+        Button:
+            id: door_back
+            text: 'Back'
+            font_name: 'Ubuntu-Medium'
+            font_size: 25
+            background_color: 0.529, 0.573, 0.745, 1 
+            size_hint: 0.65, 0.15
+            pos_hint: {'center_x': 0.5}
+            y: 20
+            on_press: 
+                root.button_pressed('back')
+                
+        Button:
+            id: add_worker
+            text: '+ Add Worker'
+            font_name: 'Ubuntu-Medium'
+            background_color: 0, 0, 0, 0  
+            color: 0.537, 0.22, 0.165, 1  
+            font_size: 25
+            size_hint: 0.2, 0.07
+            pos: 160,110
+            on_press:
+                root.button_pressed('add_worker')
+                
+        Button:
+            id: manage_worker
+            text: '|| Manage Worker'
+            font_name: 'Ubuntu-Medium'
+            background_color: 0, 0, 0, 0  
+            color: 0.537, 0.22, 0.165, 1  
+            font_size: 25
+            size_hint: 0.2, 0.07
+            pos: 390,110
+            on_press:
+                root.button_pressed('manage_worker')
+                
+        Button:
+            id: delete_worker
+            text: '- Delete Worker'
+            font_name: 'Ubuntu-Medium'
+            background_color: 0, 0, 0, 0  
+            color: 0.537, 0.22, 0.165, 1  
+            font_size: 25
+            size_hint: 0.2, 0.07
+            pos: 610,110
+            on_press:
+                root.button_pressed('delete_worker')
+
+
+

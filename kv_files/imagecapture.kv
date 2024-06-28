@@ -1,0 +1,29 @@
+<CaptureImage>:
+    TabFeatures:
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint:1,0.75
+            pos_hint: {'center_x':0.5, 'top':0.9}
+            Image:
+                id: camera_texture
+                allow_stretch: True
+                keep_ratio: True
+
+        Button:
+            background_color: 0.529, 0.573, 0.745, 1 
+            font_name: 'Ubuntu-Medium'
+            text: 'Cancel'
+            size_hint: 0.4, 0.15
+            pos_hint: {'center_x':0.3, 'top': 0.15}
+            on_press:
+                root.capture_choice('cancel')
+                        
+        Button:
+            background_color: 0.529, 0.573, 0.745, 1 
+            font_name: 'Ubuntu-Medium'
+
+            text: 'Capture'
+            pos_hint: {'center_x':0.7, 'top': 0.15}
+            size_hint: 0.4, 0.15
+            on_press:
+                root.capture_choice('capture')

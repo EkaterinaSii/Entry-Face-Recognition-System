@@ -1,0 +1,48 @@
+<BasePopup>:
+    auto_dismiss: False
+    size_hint: None, None
+    size: 400, 200
+    title: ""
+    font_name: 'Barlow'
+
+    BoxLayout:
+        
+        orientation: 'vertical'
+        Label:
+            text: root.message
+            font_name: 'Barlow'
+        Button:
+            background_color: 0.529, 0.573, 0.745, 1 
+            text: 'Close'
+            font_name: 'Ubuntu-Medium'
+            on_release: root.dismiss()
+
+<DeletePopup>:
+    title: 'Deleting...'
+    font_name: 'Barlow'
+    size_hint: None, None
+    size: 400, 200
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: root.message
+            font_name: 'Barlow'
+        BoxLayout:
+            orientation: 'horizontal'
+            Button:
+                background_color: 0.529, 0.573, 0.745, 1 
+                id: denied_close
+                text: 'No'
+                font_name: 'Ubuntu-Medium'
+                on_press:
+                    root.delete_choice('no')
+                    root.dismiss()
+            
+            Button:
+                background_color: 0.529, 0.573, 0.745, 1 
+                id: denied_close
+                text: 'Yes'
+                font_name: 'Ubuntu-Medium'
+                on_press:
+                    root.delete_choice('yes')
+                    root.dismiss()
