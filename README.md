@@ -1,21 +1,20 @@
 # Entry-Face-Recognition-System
 **Bachelor Degree Thesis.**
-> Enhancing Access Control. Practical Implementation of Facial Recognition Technology for Entry Monitoring and Database Storage.
+> Enhancing Access Control: Practical Implementation of Facial Recognition Technology for Entry Monitoring and Database Storage.
 
 ## REQUIREMENTS
 - Python 3.8.x
 - Ubuntu 20.04.6
 - Kivy 2.1.0
-- Sklearn 0.22
+- Scikit-learn (sklearn) 0.22
 
 **Note:**
-* Jetson Nano comes with Ubuntu 18.04 and this version is too old. 
-Here is a [link](https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image) to dowload Ubuntu 20.4 OS image
-* To use same pre-trained anti face-spoofing model Sklearn version 0.19.1 - 0.22.0 required. Starting from version 0.23.1 it will not run.
+* Jetson Nano comes with Ubuntu 18.04, which is too old. Here is a [link](https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image) to dowload Ubuntu 20.4 OS image.
+* To use the same pre-trained anti-face-spoofing model, Scikit-learn version 0.19.1 - 0.22.0 is required. Starting from version 0.23.1, it will not run.
 
 ## HARDWARE COMPONENTS
-* Jetson Uno
-* Arduino (I used Arduino Nano)
+* Jetson Nano
+* Arduino (I used Arduino Uno)
 * Relay
 * 12v DC Adapter
 * Electromagnetic lock
@@ -34,16 +33,24 @@ Here is a [link](https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image) to
 There is a [link](https://github.com/vardanagarwal/Proctoring-AI/tree/master/face_detection/models) to pre-trained model was used.
 
 ## GETTING STARTED
-To run the app use `python3 main.py`
+1. Clone the repository
+```bash
+git clone https://github.com/EkaterinaSii/Entry-Face-Recognition-System.git
+```
+2. Install the required dependencies
+```cd Entry-Face-Recognition-System```
+```pip install -r requirements.txt```
+3. Run the app
+```python3 main.py```
 
 ## SUPPORTED OPERATIONS
-* Entry and Lock opening with Face Recognition
-* Entry and Lock opening with Code (Personal Code assigned while creating new worker/user)
-* Adding new worker/user
-* Updating existed worker/user (Personal details and/or Face Encoding)
-* Deleting existed worker/user
-* List all the entry information (date/worker/position)
-* List all workers/users (ID/worker/position/entry code)
+* Entry and lock opening with face recognition
+* Entry and lock opening with a code (personal code assigned while creating a new worker/user)
+* Adding a new worker/user
+* Updating an existing worker/user (personal details and/or face encoding)
+* Deleting an existing worker/user
+* Listing all entry information (date/worker/position)
+* Listing all workers/users (ID/worker/position/entry code)
 
 ## DATABASE SCHEMA
 <img src="https://drive.google.com/uc?export=view&id=1jPlnVwot_rCT5jQefbLJTDXzHhPCJB8S" width="800">
