@@ -30,7 +30,7 @@
 * DC Power Supply 5v for Jetson Nano
 
 ## SCHEMATIC
-<img src="https://drive.google.com/uc?export=view&id=1N9AkYic_cDQYoCd4rAZMJcxF8xsY6ceS" width="800">
+<img src="https://drive.google.com/uc?export=view&id=18_Wwx-Y6DJazKv0eb_-yJuabARP7sOPu" width="800">
 
 ### ARDUINO UNO SCHEMA
 <img src="https://drive.google.com/uc?export=view&id=1F47PXbSt1xT7HPwhILVsSjDEXubr2_F0" width="800">
