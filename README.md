@@ -49,6 +49,6 @@ To run the app use `python3 main.py`
 ## ANTI FACE-SPOOFING MODEL
 There is a [link](https://github.com/vardanagarwal/Proctoring-AI/tree/master/face_detection/models) to pre-trained model was used.
 
-### DESKTOP ITEM :)
+#### DESKTOP IMAGE :)
 <img src="https://drive.google.com/uc?export=view&id=1tNobuVJldC7bpTEmD0SKmR1nANnjleKU" width="50">
 
