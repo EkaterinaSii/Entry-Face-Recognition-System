@@ -32,11 +32,23 @@ Here is a [link](https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image) to
 
 
 ## GETTING STARTED
-To run the app use `COMMAND HERE`
+To run the app use `python3 main.py`
+
+## SUPPORTED OPERATIONS
+* Entry and Lock opening with Face Recognition
+* Entry and Lock opening with Code (Personal Code assigned while creating new worker/user)
+* Adding new worker/user
+* Updating existed worker/user (Personal details and/or Face Encoding)
+* Deleting existed worker/user
+* List all the entry information (date/worker/position)
+* List all workers/users (ID/worker/position/entry code)
 
 ## DATABASE SCHEMA
 <img src="https://drive.google.com/uc?export=view&id=1jPlnVwot_rCT5jQefbLJTDXzHhPCJB8S" width="800">
 
 ## ANTI FACE-SPOOFING MODEL
 There is a [link](https://github.com/vardanagarwal/Proctoring-AI/tree/master/face_detection/models) to pre-trained model was used.
+
+### DESKTOP ITEM :)
+<img src="https://drive.google.com/uc?export=view&id=1tNobuVJldC7bpTEmD0SKmR1nANnjleKU" width="50">
 
