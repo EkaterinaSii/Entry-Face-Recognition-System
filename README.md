@@ -27,15 +27,16 @@ Here is a [link](https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image) to
 ## SCHEMATIC
 <img src="https://drive.google.com/uc?export=view&id=1N9AkYic_cDQYoCd4rAZMJcxF8xsY6ceS" width="800">
 
-### WIRING
-| smth | smth |
-|----|----|
-| smth | smth |
-
 ### ARDUINO UNO SCHEMA
 <img src="https://drive.google.com/uc?export=view&id=1F47PXbSt1xT7HPwhILVsSjDEXubr2_F0" width="800">
 
 
 ## GETTING STARTED
 To run the app use `COMMAND HERE`
+
+## DATABASE SCHEMA
+<img src="https://drive.google.com/uc?export=view&id=1jPlnVwot_rCT5jQefbLJTDXzHhPCJB8S" width="800">
+
+## ANTI FACE-SPOOFING MODEL
+There is a [link](https://github.com/vardanagarwal/Proctoring-AI/tree/master/face_detection/models) to pre-trained model was used.
 
