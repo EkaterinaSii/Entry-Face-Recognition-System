@@ -38,6 +38,19 @@
 ## ANTI FACE-SPOOFING MODEL
 There is a [link](https://github.com/vardanagarwal/Proctoring-AI/tree/master/face_detection/models) to pre-trained model was used.
 
+## HARDWARE CONFIGURATION
+
+Before running the code, ensure that the camera and Arduino ports are correctly configured. Check and update the ports in the code to match your setup:
+
+1. **Camera Port**: Ensure that the camera is connected and recognized by the system. You can check the camera port using:
+   ```bash
+   ls /dev/video*```
+  Update the camera port in the code if necessary.
+2. **Arduino Port**: Ensure that the Arduino is connected and recognized by the system. You can check the Arduino port using:
+   ```ls /dev/ttyUSB* ```
+   Update the Arduino port in the code if necessary.
+
+   
 ## GETTING STARTED
 1. Clone the repository
 ```bash
