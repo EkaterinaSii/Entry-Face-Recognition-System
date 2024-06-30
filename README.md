@@ -49,7 +49,6 @@ Before running the code, ensure that the camera and Arduino ports are correctly 
 2. **Arduino Port**: Ensure that the Arduino is connected and recognized by the system. You can check the Arduino port using:
    ```bash
    ls /dev/ttyUSB*
-
    
 ## GETTING STARTED
 1. Clone the repository
