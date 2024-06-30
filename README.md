@@ -5,8 +5,14 @@
 ## REQUIREMENTS
 - Python 3.8.x
 - Ubuntu 20.04.6
+
+  ### Python Libraries
 - Kivy 2.1.0
 - Scikit-learn (sklearn) 0.22
+- Numpy 1.16.5
+- Face Recognition 1.2.3
+- OpenCV (cv2) 4.8.0
+- PySerial 3.4  
 
 **Note:**
 * Jetson Nano comes with Ubuntu 18.04, which is too old. Here is a [link](https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image) to dowload Ubuntu 20.4 OS image.
