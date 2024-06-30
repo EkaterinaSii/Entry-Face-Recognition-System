@@ -44,11 +44,11 @@ Before running the code, ensure that the camera and Arduino ports are correctly 
 
 1. **Camera Port**: Ensure that the camera is connected and recognized by the system. You can check the camera port using:
    ```bash
-   ls /dev/video*```
-  Update the camera port in the code if necessary.
+   ls /dev/video*
+
 2. **Arduino Port**: Ensure that the Arduino is connected and recognized by the system. You can check the Arduino port using:
-   ```ls /dev/ttyUSB* ```
-   Update the Arduino port in the code if necessary.
+   ```bash
+   ls /dev/ttyUSB*
 
    
 ## GETTING STARTED
