@@ -1,0 +1,6 @@
+kivy==2.1.0
+scikit-learn=0.22
+numpy==1.16.5
+face_recognition==1.2.3
+pyserial==3.4
+opencv-python==4.8
