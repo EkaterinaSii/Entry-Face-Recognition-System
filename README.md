@@ -2,7 +2,7 @@
 **Bachelor Degree Thesis.**
 > Enhancing Access Control: Practical Implementation of Facial Recognition Technology for Entry Monitoring and Database Storage.
 
-According to the American Lost and Found Statistics of 2023, 60% of individuals reported losing an item in the past year, with keys, cell phones, wallets,and sunglasses being the most common. 
+According to the American Lost and Found Statistics of 2023, 60% of individuals reported losing an item in the past year, with keys, cell phones, wallets,and sunglasses being the most common. 
 This raises the question: what if physical keys were no longer necessary?
 
 This thesis explores the implementation of facial recognition technology in a security entry system to enhance security, improve access tracking, and eliminate the need for physical keys in secure areas. 
