@@ -2,6 +2,15 @@
 **Bachelor Degree Thesis.**
 > Enhancing Access Control: Practical Implementation of Facial Recognition Technology for Entry Monitoring and Database Storage.
 
+According to the American Lost and Found Statistics of 2023, 60% of individuals reported losing an item in the past year, with keys, cell phones, wallets,and sunglasses being the most common. 
+This raises the question: what if physical keys were no longer necessary?
+
+This thesis explores the implementation of facial recognition technology in a security entry system to enhance security, improve access tracking, and eliminate the need for physical keys in secure areas. 
+The system developed is a software solution running on the Jetson Nano, integrated with a camera, display, electromagnetic lock, and Arduino Uno. The system operates autonomously, with the use of facial recognition technology granting access to authorized users stored in the database. It also includes backup entry methods like an entry code and allows administrators to manage access permissions and review entry logs through a dedicated interface.
+
+The final system demonstrated reliable facial recognition and anti-spoofing capabilities, though with room for improvement in accuracy. 
+The work serves as a foundation for developing autonomous access control systems applicable in different areas
+
 ## REQUIREMENTS
 - Python 3.8.x
 - Ubuntu 20.04.6
